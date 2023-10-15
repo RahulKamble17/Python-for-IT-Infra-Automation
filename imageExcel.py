@@ -157,7 +157,7 @@ def grabImage(b_name,token):
     # Mail object
     outlook=win32.Dispatch('outlook.application')
     mail=outlook.CreateItem(0)
-    mail.To="BMSPlutoInfraLinux@cognizant.com; BMSPlutoInfraWindows@cognizant.com; BMSPlutoInfraSMO@cognizant.com; COGBMSCommandCenter@cognizant.com; BMSPlutoInfraDBA@cognizant.com; MG-BMS-PLUTO-LINUX@bms.com; MG-BMS-PLUTO-WINDOWS@bms.com; MG-BMS-PLUTO-DBA@bms.com; MG-BMS-PLUTO-SMO@bms.com; MG-BMS-PLUTO-COMMANDCENTER@bms.com; Nicholas.Pereira@cognizant.com"
+    mail.To="" #Mail ID goes here..
     mail.HTMLBody="""<span style="background-color: #FFFF00">** This is a test mail, generated programmatically including all its contents **</span><br><br>"""
     mail.Subject="Test Automated: "
     if b_name=='change':
@@ -174,7 +174,7 @@ def grabImage(b_name,token):
         <br><br>{tSheet}<br><br>"""
     
     else:
-        mail.CC="Eswar.Singh@cognizant.com; Souvik.Mitra@bms.com; Arijit.Sinha@cognizant.com"
+        mail.CC="" #Mail ID goes here..
         mail.Subject+="Updated date report as of "+smo_date
         mail.HTMLBody+=f"""<html><body>Hi Team,<br><br>Please find below the snapshots for the last updated report for Incident and Catalog Tasks. Also, find the details of the Incident and Catalog Tasks that have not been updated for more than 1 day.
         <br>As mentioned kindly update the Incidents, Change task and Catalog Task on a daily basis and also update the Configuration item without failure.
@@ -185,8 +185,8 @@ def grabImage(b_name,token):
     mail.HTMLBody+="""
         <br><b>Regards,<br>
         Cognizant Command Center.<br>
-        CC Email :- COGBMSCommandCenter@cognizant.com<br>
-        CC/MIM Phone :- +91 887-092-2960 /+91 770-806-927</b>
+        CC Email :- <br>
+        CC/MIM Phone :- </b>
     </body></html>"""
     mail.Display()
 
