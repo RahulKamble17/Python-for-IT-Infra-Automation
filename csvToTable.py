@@ -118,7 +118,7 @@ def smo_Reports():
     before the <b>Planned end date and time.</b><br>
         <br><b>Regards,<br>
         Cognizant Command Center.<br>
-        CC Email :- COGBMSCommandCenter@cognizant.com<br>
-        CC/MIM Phone :- +91 887-092-2960 /+91 770-806-927</b>
+        CC Email :- <br>
+        CC/MIM Phone :- </b>
     </body></html>"""
     mail.Display(True)
