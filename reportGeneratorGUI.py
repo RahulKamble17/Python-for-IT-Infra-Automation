@@ -468,13 +468,13 @@ def mail(file_path,b_name):
         # replace with the email address you want to send the email to
         if (row_count!=0):
             if (df['assignment_group'][0]=="INFRA SUPPORT PLUTO WINDOWS"):
-                mail.To = 'MG-BMS-PLUTO-WINDOWS@bms.com'
+                mail.To = '' #Mail ID goes here..
                 track='Windows'
             elif (df['assignment_group'][0]=="INFRA SUPPORT PLUTO LINUX"):
-                mail.To = 'MG-BMS-PLUTO-LINUX@bms.com'
+                mail.To = '' #Mail ID goes here..
                 track='Linux'
             elif (df['assignment_group'][0]=="INFRA SUPPORT PLUTO DBA"):
-                mail.To = 'MG-BMS-PLUTO-DBA@bms.com'
+                mail.To = '' #Mail ID goes here..
                 track='DBA'
             else:
                 mail.To= ' '
@@ -482,19 +482,19 @@ def mail(file_path,b_name):
         else:
             mail.To= ' '
         mail.Subject = 'Multiple P2 Alerts: '+track
-        mail.CC='COGBMSCommandCenter@cognizant.com'
+        mail.CC='' #Mail ID goes here..
     
     # P1/P2 Report: Adding current shift to mail subject, To and Cc Selection  
     elif (button_name=="p1p2"):
-        mail.To='COGBMSCommandCenter@cognizant.com'
-        mail.CC='Nicholas.Pereira@cognizant.com'
+        mail.To='' #Mail ID goes here..
+        mail.CC='' #Mail ID goes here..
         mail.Subject = 'P2/P2 Tickets - '+p1p2_shift+' Shift IST'
         greet_str="Please find the list of P1/P2 Incidents from  "+p1p2_shift+"  Shift.<br>"
 
     # Infra Report: Adding current shift to mail subject, To and Cc Selection 
     elif (button_name=="infra"):
-        mail.To='CTSBMSPLUTOINFRAALL@cognizant.com;MG-BMS-PLUTO-INFRAALL@bms.com'
-        mail.CC='BMSPlutoInfraSMO@cognizant.com;COGBMSCommandCenter@cognizant.com'
+        mail.To='' #Mail ID goes here..
+        mail.CC='' #Mail ID goes here..
         mail.Subject = 'Cognizant Command Center Ticket Status ( '+day_time+' Shift EST)'
         #Greeting line and Acitve Incidents table
         greet_str="""Greetings of the day!<br><br>Please find the below P1/P2 MIM status report:<br>
@@ -638,8 +638,8 @@ def mail(file_path,b_name):
     </html><br><br>
     <b>Regards,<br>
     Cognizant Command Center.<br>
-    CC Email :- COGBMSCommandCenter@cognizant.com<br>
-    CC/MIM Phone :- +91 887-092-2960 /+91 770-806-927</b>"""
+    CC Email :- <br>
+    CC/MIM Phone :- </b>"""
     
     mail.HTMLBody = html
     mail.Display()
