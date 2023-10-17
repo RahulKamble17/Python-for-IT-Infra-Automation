@@ -645,17 +645,14 @@ def mail(file_path,b_name):
     mail.Display()
 
 
+# Code for Image reference below to add Organization logo
+#cog_img=customtkinter.CTkImage(dark_image=Image.open(""),size=(200,55))
+#ImgLabel= customtkinter.CTkLabel(root,text=" " ,image=cog_img)
+#ImgLabel.pack()
+#bms_img=customtkinter.CTkImage(dark_image=Image.open(""),size=(30,50))
+#ImgLabel= customtkinter.CTkLabel(root,text=" " ,image=bms_img)
+#ImgLabel.pack(side="top")
 
-cog_img=customtkinter.CTkImage(dark_image=Image.open("C:\\Users\\2106624\\OneDrive - Cognizant\\Desktop\\OBIEE CSI\\Cognizant-logo_font-white.png"),size=(200,55))
-ImgLabel= customtkinter.CTkLabel(root,text=" " ,image=cog_img)
-ImgLabel.pack()
-bms_img=customtkinter.CTkImage(dark_image=Image.open("C:\\Users\\2106624\\OneDrive - Cognizant\\Desktop\\OBIEE CSI\\bms_logo.png"),size=(30,50))
-ImgLabel= customtkinter.CTkLabel(root,text=" " ,image=bms_img)
-ImgLabel.pack(side="top")
-1
-
-icon= tk.PhotoImage(file="C:\\Users\\2106624\\OneDrive - Cognizant\\Desktop\\OBIEE CSI\\cog_logo.ico.png") 
-root.iconphoto(True, icon)
 
 #Alerts Frame
 frame= customtkinter.CTkFrame(master=root)
